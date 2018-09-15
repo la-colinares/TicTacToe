@@ -21,6 +21,6 @@
   - GlideToast
   - ResideMenu
  
- #Credits
+ # Credits
   - Coding in Flow (https://www.codinginflow.com)
   - Tic-Tac-Toe Game Grey Icon (https://www.softicons.com)
