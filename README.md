@@ -4,7 +4,7 @@
 # Features
   - Splash Screen
   - Play TicTacToe Game
-  - Scores
+  - Winner
   - Background Music
   - Light/Dark Mode
   - Help
