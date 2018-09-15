@@ -21,8 +21,6 @@
                 android:layout_height="wrap_content"
                 android:background="@color/colorDarkGray"
                 android:drawablePadding="10dp"
-                android:drawableStart="@drawable/ic_help"
-                android:drawableTint="@color/colorWhite"
                 android:fontFamily="serif-monospace"
                 android:padding="10dp"
                 android:text="Help"
