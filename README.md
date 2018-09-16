@@ -18,9 +18,11 @@
   - MVVM Architecture
   - Material Design
   - ButterKnife (Zelesny)
+  - SweetAlertDialog
   - GlideToast
   - ResideMenu
  
  # Credits
   - Coding in Flow (https://www.codinginflow.com)
   - Tic-Tac-Toe Game Grey Icon (https://www.softicons.com)
+  - Background Music - Game Music (https://www.youtube.com/watch?v=UDde8RTFhhU)
