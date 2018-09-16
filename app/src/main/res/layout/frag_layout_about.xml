@@ -176,6 +176,23 @@
             android:textColor="?attr/textNameColor"
             android:textSize="12sp"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:paddingStart="10dp"
+            android:text="Background Music - Game Music"
+            android:textColor="?attr/textNameColor"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:paddingStart="10dp"
+            android:text="https://www.youtu.be/UDde8RTFhhU"
+            android:textColor="?attr/textNameColor"
+            android:textSize="12sp"/>
+
 
     </LinearLayout>
 </ScrollView>
