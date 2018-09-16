@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -23,6 +24,8 @@ import com.colinares.tictactoe.Fragments.FragSettings;
 import com.colinares.tictactoe.R;
 import com.colinares.tictactoe.Utils.MusicController;
 import com.colinares.tictactoe.Utils.ThemeUtils;
+import com.jeevandeshmukh.glidetoastlib.GlideToast;
+import com.ontbee.legacyforks.cn.pedant.SweetAlert.SweetAlertDialog;
 import com.special.ResideMenu.ResideMenu;
 import com.special.ResideMenu.ResideMenuItem;
 
@@ -52,6 +55,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ResideMenuItem itemExit;
 
     private ThemeUtils themeUtils;
+
+    //for double back press
+    private boolean doubleBackPressed = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -194,4 +201,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onDestroy();
         MusicController.stopPlayMusic(mContext);
     }*/
+
+    public void onBackPressed() {
+        if (doubleBackPressed) {
+            finish();
+            return;
+        }
+        doubleBackPressed = true;
+        showWarningMessage();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                doubleBackPressed = false;
+            }
+        }, 2000);
+
+    }
+
+    private void showWarningMessage() {
+        final SweetAlertDialog sDialog = new SweetAlertDialog(mContext, SweetAlertDialog.WARNING_TYPE);
+        sDialog.setTitleText(getResources().getString(R.string.app_name));
+        sDialog.setContentText("Are you sure you want to exit?");
+        sDialog.setConfirmText("YES");
+        sDialog.setCancelText("NO");
+        sDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+            @Override
+            public void onClick(SweetAlertDialog sweetAlertDialog) {
+                sDialog.dismissWithAnimation();
+                finish();
+            }
+        });
+        sDialog.setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+            @Override
+            public void onClick(SweetAlertDialog sweetAlertDialog) {
+                sDialog.dismissWithAnimation();
+            }
+        });
+        sDialog.show();
+    }
+
 }

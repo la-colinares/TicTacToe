@@ -64,4 +64,9 @@ public class SplashScreen extends AppCompatActivity {
         };
         loading.start();
     }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
 }
