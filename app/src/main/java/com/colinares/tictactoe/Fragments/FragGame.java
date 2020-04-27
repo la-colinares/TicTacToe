@@ -1,11 +1,11 @@
 package com.colinares.tictactoe.Fragments;
 
-import android.arch.lifecycle.ViewModelProvider;
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +17,7 @@ import com.colinares.tictactoe.R;
 import com.colinares.tictactoe.Utils.DateTimeUtils;
 import com.colinares.tictactoe.Utils.ThemeUtils;
 import com.colinares.tictactoe.ViewModel.WinnerViewModel;
-import com.jeevandeshmukh.glidetoastlib.GlideToast;
+import com.ontbee.legacyforks.cn.pedant.SweetAlert.SweetAlertDialog;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -86,7 +86,7 @@ public class FragGame extends Fragment implements View.OnClickListener {
         btnReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                resetGame();
+                displayResetWarning();
             }
         });
     }
@@ -169,23 +169,22 @@ public class FragGame extends Fragment implements View.OnClickListener {
 
     private void player1Wins() {
         player1points++;
-        new GlideToast.makeToast(getActivity(), "Player 1 Wins", GlideToast.LENGTHTOOLONG, GlideToast.SUCCESSTOAST, GlideToast.CENTER).show();
+        displayWinner("Player 1 Wins.");
         insertScore("Player 1 wins against Player 2");
         updatePointsText();
         resetBoard();
     }
 
-
     private void player2Wins() {
         player2points++;
-        new GlideToast.makeToast(getActivity(), "Player 2 Wins", GlideToast.LENGTHTOOLONG, GlideToast.SUCCESSTOAST, GlideToast.CENTER).show();
+        displayWinner("Player 2 Wins.");
         insertScore("Player 2 wins against Player 1");
         updatePointsText();
         resetBoard();
     }
 
     private void draw() {
-        new GlideToast.makeToast(getActivity(), "The Game is Draw", GlideToast.LENGTHTOOLONG, GlideToast.DEFAULTTOAST, GlideToast.CENTER).show();
+        displayDrawMessage("The Game is Draw.");
         resetBoard();
     }
 
@@ -211,7 +210,6 @@ public class FragGame extends Fragment implements View.OnClickListener {
         updatePointsText();
         resetBoard();
     }
-
 
     private void insertScore(String message) {
         Winner winner = new Winner();
@@ -245,4 +243,59 @@ public class FragGame extends Fragment implements View.OnClickListener {
         }
 
     }
+
+    private void displayDrawMessage(String message){
+        final SweetAlertDialog sDialog = new SweetAlertDialog(getContext(), SweetAlertDialog.CUSTOM_IMAGE_TYPE);
+        sDialog.setTitleText(getResources().getString(R.string.app_name));
+        sDialog.setContentText(message);
+        sDialog.setCustomImage(R.drawable.tic_tac_toe);
+        sDialog.setCancelable(false);
+        sDialog.show();
+        sDialog.setConfirmText("OK");
+        sDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+            @Override
+            public void onClick(SweetAlertDialog sweetAlertDialog) {
+                sDialog.dismissWithAnimation();
+            }
+        });
+
+    }
+    private void displayWinner(String message){
+        final SweetAlertDialog sDialog = new SweetAlertDialog(getContext(), SweetAlertDialog.SUCCESS_TYPE);
+        sDialog.setTitleText(getResources().getString(R.string.app_name));
+        sDialog.setContentText(message);
+        sDialog.setCancelable(false);
+        sDialog.show();
+        sDialog.setConfirmText("OK");
+        sDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+            @Override
+            public void onClick(SweetAlertDialog sweetAlertDialog) {
+                sDialog.dismissWithAnimation();
+            }
+        });
+
+    }
+    private void displayResetWarning(){
+        final SweetAlertDialog sDialog = new SweetAlertDialog(getContext(), SweetAlertDialog.SUCCESS_TYPE);
+        sDialog.setTitleText(getResources().getString(R.string.app_name));
+        sDialog.setContentText("Are you sure you want to reset?");
+        sDialog.setCancelable(false);
+        sDialog.show();
+        sDialog.setConfirmText("YES");
+        sDialog.setCancelText("NO");
+        sDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+            @Override
+            public void onClick(SweetAlertDialog sweetAlertDialog) {
+                sDialog.dismissWithAnimation();
+                resetGame();
+            }
+        });
+        sDialog.setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+            @Override
+            public void onClick(SweetAlertDialog sweetAlertDialog) {
+                sDialog.dismissWithAnimation();
+            }
+        });
+    }
+
 }

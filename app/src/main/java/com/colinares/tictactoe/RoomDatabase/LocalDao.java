@@ -1,16 +1,16 @@
 package com.colinares.tictactoe.RoomDatabase;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.persistence.room.Dao;
-import android.arch.persistence.room.Insert;
-import android.arch.persistence.room.Query;
+import androidx.lifecycle.LiveData;
+import androidx.room.Dao;
+import androidx.room.Insert;
+import androidx.room.Query;
 
 import com.colinares.tictactoe.Constants.AppConstants;
 import com.colinares.tictactoe.Model.Winner;
 
 import java.util.List;
 
-import static android.arch.persistence.room.OnConflictStrategy.REPLACE;
+import static androidx.room.OnConflictStrategy.REPLACE;
 
 /**
  * Created by Colinares on 9/15/2018.

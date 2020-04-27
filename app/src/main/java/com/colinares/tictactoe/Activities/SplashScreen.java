@@ -1,15 +1,14 @@
 package com.colinares.tictactoe.Activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatDelegate;
-import android.util.Log;
+import androidx.appcompat.app.AppCompatDelegate;
+
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.colinares.tictactoe.R;
 import com.colinares.tictactoe.Utils.ThemeUtils;

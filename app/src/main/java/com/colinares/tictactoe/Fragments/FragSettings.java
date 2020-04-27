@@ -2,10 +2,10 @@ package com.colinares.tictactoe.Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatDelegate;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatDelegate;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,14 +14,12 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.PopupWindow;
-import android.widget.SeekBar;
 import android.widget.Switch;
 
 import com.colinares.tictactoe.Activities.MainActivity;
 import com.colinares.tictactoe.R;
 import com.colinares.tictactoe.Utils.MusicController;
 import com.colinares.tictactoe.Utils.ThemeUtils;
-import com.ontbee.legacyforks.cn.pedant.SweetAlert.SweetAlertDialog;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -110,7 +108,7 @@ public class FragSettings extends Fragment {
 
         final Button btnOk = viewPopup.findViewById(R.id.settings_help_ok);
 
-        final PopupWindow popupWindow = new PopupWindow(viewPopup, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        final PopupWindow popupWindow = new PopupWindow(viewPopup, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
         popupWindow.setAnimationStyle(R.style.popup_window_animation_slide);
         popupWindow.setFocusable(true);

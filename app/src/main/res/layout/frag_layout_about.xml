@@ -92,7 +92,7 @@
             android:orientation="horizontal"
             android:padding="10dp">
 
-            <android.support.design.widget.FloatingActionButton
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/about_fab_fb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -105,7 +105,7 @@
                 app:fabSize="normal"
                 app:rippleColor="?attr/colorPrimary" />
 
-            <android.support.design.widget.FloatingActionButton
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/about_fab_linkedin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -118,7 +118,7 @@
                 app:fabSize="normal"
                 app:rippleColor="?attr/colorPrimary" />
 
-            <android.support.design.widget.FloatingActionButton
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/about_fab_github"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -189,7 +189,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
             android:paddingStart="10dp"
-            android:text="https://www.youtu.be/UDde8RTFhhU"
+            android:text="https://www.youtube.com/watch?v=UDde8RTFhhU"
             android:textColor="?attr/textNameColor"
             android:textSize="12sp"/>
 

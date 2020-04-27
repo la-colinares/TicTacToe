@@ -4,7 +4,9 @@
     android:layout_height="match_parent"
     android:background="?attr/BackgroundColorApp"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="24dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,50 +19,50 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:fontFamily="serif-monospace"
+            android:freezesText="true"
+            android:paddingStart="7dp"
             android:paddingTop="10dp"
-            android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:text="Player 1: 0"
             android:textColor="?attr/textNameColor"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:freezesText="true"/>
+            android:textStyle="bold" />
 
         <View
             android:layout_width="1dp"
             android:layout_height="30dp"
-            android:layout_marginTop="15dp"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
             android:background="@color/colorLightGray" />
 
         <TextView
             android:id="@+id/player_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="serif-monospace"
-            android:gravity="start"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
             android:layout_below="@+id/player_1"
+            android:fontFamily="serif-monospace"
+            android:freezesText="true"
+            android:gravity="start"
+            android:paddingStart="7dp"
+            android:paddingEnd="10dp"
             android:text="Player 2: 0"
             android:textColor="?attr/textNameColor"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:freezesText="true"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_game_reset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/ic_reset"
-            android:text="Reset"
-            android:textStyle="bold"
-            android:fontFamily="serif-monospace"
-            android:textColor="@color/colorDirtyWhite"
-            android:background="?attr/buttonColor"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="10dp"/>
+            android:layout_marginEnd="10dp"
+            android:background="?attr/buttonColor"
+            android:drawableTop="@drawable/ic_reset"
+            android:fontFamily="serif-monospace"
+            android:text="Reset"
+            android:textColor="@color/colorDirtyWhite"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
@@ -75,39 +77,39 @@
             android:id="@+id/btn_00"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="3dp"
             android:layout_weight="1"
             android:background="@drawable/btn_bg_transparent_white_border"
             android:fontFamily="serif-monospace"
+            android:freezesText="true"
             android:gravity="center"
             android:textColor="?attr/textNameColor"
             android:textSize="30sp"
-            android:textStyle="bold"
-            android:freezesText="true"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_01"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="3dp"
             android:layout_weight="1"
             android:background="@drawable/btn_bg_transparent_white_border"
             android:fontFamily="serif-monospace"
+            android:freezesText="true"
             android:textColor="?attr/textNameColor"
             android:textSize="30sp"
-            android:textStyle="bold"
-            android:freezesText="true"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_02"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="3dp"
             android:layout_weight="1"
             android:background="@drawable/btn_bg_transparent_white_border"
@@ -129,46 +131,46 @@
             android:id="@+id/btn_10"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="3dp"
             android:layout_weight="1"
             android:background="@drawable/btn_bg_transparent_white_border"
             android:fontFamily="serif-monospace"
+            android:freezesText="true"
             android:textColor="?attr/textNameColor"
             android:textSize="30sp"
-            android:textStyle="bold"
-            android:freezesText="true"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_11"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="3dp"
             android:layout_weight="1"
             android:background="@drawable/btn_bg_transparent_white_border"
             android:fontFamily="serif-monospace"
+            android:freezesText="true"
             android:textColor="?attr/textNameColor"
             android:textSize="30sp"
-            android:textStyle="bold"
-            android:freezesText="true"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_12"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="3dp"
             android:layout_weight="1"
             android:background="@drawable/btn_bg_transparent_white_border"
             android:fontFamily="serif-monospace"
+            android:freezesText="true"
             android:textColor="?attr/textNameColor"
             android:textSize="30sp"
-            android:textStyle="bold"
-            android:freezesText="true"/>
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -183,46 +185,46 @@
             android:id="@+id/btn_20"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="3dp"
             android:layout_weight="1"
             android:background="@drawable/btn_bg_transparent_white_border"
             android:fontFamily="serif-monospace"
+            android:freezesText="true"
             android:textColor="?attr/textNameColor"
             android:textSize="30sp"
-            android:textStyle="bold"
-            android:freezesText="true"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_21"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="3dp"
             android:layout_weight="1"
             android:background="@drawable/btn_bg_transparent_white_border"
             android:fontFamily="serif-monospace"
+            android:freezesText="true"
             android:textColor="?attr/textNameColor"
             android:textSize="30sp"
-            android:textStyle="bold"
-            android:freezesText="true"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_22"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="3dp"
             android:layout_weight="1"
             android:background="@drawable/btn_bg_transparent_white_border"
             android:fontFamily="serif-monospace"
+            android:freezesText="true"
             android:textColor="?attr/textNameColor"
             android:textSize="30sp"
-            android:textStyle="bold"
-            android:freezesText="true"/>
+            android:textStyle="bold" />
 
     </LinearLayout>
 
